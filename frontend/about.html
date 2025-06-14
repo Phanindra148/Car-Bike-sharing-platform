@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Car & Bike Sharing Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f1f1f1;
+      box-sizing: border-box;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 12px;
+      margin: 0;
+      background-color: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 0 18px; }
+    nav ul li a {
+      color: #f9f9f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover { color: #f9d342; }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      margin-top: 40px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h1, h2 {
+      color: #f9d342;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section div {
+      flex: 1 1 48%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: 14px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .section div h3 {
+      color: #f9d342;
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      background-color: #0d0d0d;
+      color: #ccc;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .section div {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to the **Car & Bike Sharing Platform**, a revolutionary way to share and rent vehicles seamlessly.</p>
+
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>We aim to create a **sustainable, cost-effective, and user-friendly** vehicle-sharing system that connects **owners and renters** efficiently. By enabling **car and bike owners** to rent out their vehicles, we help optimize resources, reduce traffic congestion, and contribute to a **greener environment**.</p>
+    </div>
+
+    <div class="section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Convenience:</strong> Book a ride anytime, anywhere.</li>
+        <li><strong>Affordability:</strong> Save money compared to traditional rentals.</li>
+        <li><strong>Security:</strong> Verified owners and secure transactions.</li>
+        <li><strong>Eco-Friendly:</strong> Reduce emissions by sharing rides.</li>
+        <li><strong>24/7 Support:</strong> Our team is available round-the-clock.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>How It Works</h2>
+      <div>
+        <h3>For Owners</h3>
+        <p>List your car or bike, set availability and pricing.</p>
+      </div>
+      <div>
+        <h3>For Renters</h3>
+        <p>Browse available vehicles, book instantly, and enjoy your ride.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Join Us Today!</h2>
+      <p>Be part of the **future of smart transportation**. Whether you need a ride or want to earn money by renting out your vehicle, our platform is designed for you.</p>
+      <a href="register.html" class="btn">Get Started</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Car & Bike Sharing Platform. All rights reserved.
+  </footer>
+</body>
+</html>

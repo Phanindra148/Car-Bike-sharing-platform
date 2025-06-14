@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚘 User Dashboard - Book Vehicle</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #D4AF37;
+      margin-bottom: 20px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filters select {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    #vehicleList {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      gap: 20px;
+    }
+
+    .vehicle-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      color: #fff;
+    }
+
+    .vehicle-card h3 {
+      margin: 0 0 10px;
+      color: #D4AF37;
+    }
+
+    .vehicle-card p {
+      margin: 5px 0;
+    }
+
+    .book-button {
+      background-color: #D4AF37;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .book-button:hover {
+      background-color: #caa731;
+    }
+
+    @media (max-width: 700px) {
+      #vehicleList {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <nav>
+        <ul>
+          <li><a href="../frontend/index.html">🏠 Home</a></li>
+          <li><a href="../frontend/about.html">🧾 About</a></li>
+          <li><a href="../frontend/contact.html">📞 Contact</a></li>
+          <li><a href="../frontend/login.html">🔐 Login</a></li>
+          <li><a href="../frontend/register.html">📝 Register</a></li>
+        </ul>
+      </nav>
+      
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>🚘 Available Vehicles for Booking</h2>
+    
+    <div class="filters">
+      <select id="typeFilter">
+        <option value="All">All Types</option>
+        <option value="Car">Car</option>
+        <option value="Bike">Bike</option>
+      </select>
+
+      <select id="locationFilter">
+        <option value="All">All Locations</option>
+      </select>
+    </div>
+
+    <div id="vehicleList"></div>
+  </div>
+
+  <script src="user_dashboard.js"></script>
+</body>
+</html>

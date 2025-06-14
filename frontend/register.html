@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚗 Register | Car & Bike Sharing</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f2027;  /* fallback for old browsers */
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #D4AF37;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container button {
+      margin-bottom: 12px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .form-container input,
+    .form-container select {
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    .form-container button {
+      background-color: #D4AF37;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #caa731;
+    }
+
+    .form-container p {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .form-container a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="../frontend/index.html">🏠 Home</a></li>
+      <li><a href="../frontend/services.html">🛠️ Services</a></li>
+      <li><a href="../frontend/contact.html">📞 Contact</a></li>
+      <li><a href="../frontend/login.html">🔐 Login</a></li>
+      <li><a href="../frontend/register.html">📝 Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Registration Form -->
+  <div class="form-container">
+    <h2>📝 Register</h2>
+    <form action="../backend/register.php" method="POST">
+      <input type="text" name="fullname" placeholder="👤 Full Name" required>
+      <input type="email" name="email" placeholder="📧 Email" required>
+      <input type="password" name="password" placeholder="🔒 Password" required>
+
+      <!-- Role Dropdown -->
+      <select name="role" required>
+        <option value="" disabled selected>🔽 Select Role</option>
+        <option value="owner">🚗 Owner</option>
+        <option value="user">🙋 User</option>
+      </select>
+
+      <button type="submit">✅ Register</button>
+    </form>
+    <p>Already registered? <a href="login.html">🔑 Login</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Car & Bike Sharing Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f1f1f1;
+      box-sizing: border-box;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 12px;
+      margin: 0;
+      background-color: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 0 18px; }
+    nav ul li a {
+      color: #f9f9f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover { color: #f9d342; }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      margin-top: 40px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .section {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section div {
+      flex: 1 1 48%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: 14px;
+      box-sizing: border-box;
+    }
+
+    .section div h2 {
+      color: #f9d342;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: linear-gradient(to right, #f9d342, #ffb347);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    h1, h2 {
+      color: #f9d342;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      background-color: #0d0d0d;
+      color: #ccc;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .section div {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Have any questions or need support? Get in touch with us.</p>
+
+    <div class="section">
+      <div>
+        <h2>📍 Office Address</h2>
+        <p>123 Car & Bike Sharing Street, Tech City, 560001</p>
+      </div>
+      <div>
+        <h2>📞 Phone</h2>
+        <p>+1 234 567 890 | +1 987 654 321</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div>
+        <h2>✉️ Email</h2>
+        <p>support@carbikeshare.com</p>
+      </div>
+      <div>
+        <h2>🕘 Working Hours</h2>
+        <p>Mon–Fri: 9:00 AM - 6:00 PM<br>Sat–Sun: 10:00 AM - 4:00 PM</p>
+      </div>
+    </div>
+
+    <h2>📩 Send Us a Message</h2>
+    <form action="contact-form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Car & Bike Sharing Platform. All rights reserved.
+  </footer>
+</body>
+</html>

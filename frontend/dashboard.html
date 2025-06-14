@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+
+    <div class="add-section glass">
+      <h2>Add Your Vehicle</h2>
+      <form id="addVehicleForm">
+        <select id="vehicleType" required>
+          <option value="">Select Type</option>
+          <option value="Car">Car</option>
+          <option value="Bike">Bike</option>
+        </select>
+        <input type="text" id="model" placeholder="Model" required />
+        <input type="number" id="price" placeholder="Price per hour" required />
+        <input type="number" id="hours" placeholder="Available hours" required />
+        <input type="text" id="location" placeholder="Location" required />
+        <input type="text" id="contact" placeholder="Contact Number" required />
+        <button type="submit">Add Vehicle</button>
+      </form>
+    </div>
+
+    <div class="book-section glass">
+      <h2>Available Vehicles</h2>
+      <div id="vehicles"></div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

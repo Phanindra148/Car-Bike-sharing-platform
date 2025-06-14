@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔐 Login - Car & Bike Sharing</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+    }
+
+    .form-box {
+      max-width: 400px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .form-box h1 {
+      margin-bottom: 10px;
+      color: #D4AF37;
+    }
+
+    .form-box p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .form-box form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-box input {
+      margin-bottom: 12px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    .form-box button {
+      background-color: #D4AF37;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-box button:hover {
+      background-color: #caa731;
+    }
+
+    .bottom-text {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .bottom-text a {
+      color: #D4AF37;
+      text-decoration: none;
+    }
+
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #111;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="services.html">🛠️ Services</a></li>
+      <li><a href="contact.html">📞 Contact</a></li>
+      <li><a href="login.html">🔐 Login</a></li>
+      <li><a href="register.html">📝 Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="form-box">
+      <h1>🔐 Login</h1>
+      <p>Access your account to start renting or sharing vehicles.</p>
+
+      <form action="/Car-Bike-Sharing-Platform/backend/login.php" method="POST">
+        <input type="email" name="email" placeholder="📧 Email" required />
+        <input type="password" name="password" placeholder="🔒 Password" required />
+        <button type="submit">✅ Login</button>
+      </form>
+
+      <p class="bottom-text">
+        Don't have an account? <a href="register.html">📝 Register here</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Car & Bike Sharing. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

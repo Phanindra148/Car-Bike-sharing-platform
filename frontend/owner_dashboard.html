@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚗 Owner Dashboard - Add Vehicle</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #D4AF37;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .form-row label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      background-color: #D4AF37;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #caa731;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <nav>
+        <ul>
+          <li><a href="../frontend/index.html">🏠 Home</a></li>
+          <li><a href="../frontend/about.html">🧾 About</a></li>
+          <li><a href="../frontend/contact.html">📞 Contact</a></li>
+          <li><a href="../frontend/login.html">🔐 Login</a></li>
+          <li><a href="../frontend/register.html">📝 Register</a></li>
+        </ul>
+      </nav>
+      
+    </ul>
+  </nav>
+
+  <!-- Add Vehicle Form -->
+  <div class="container">
+    <h2>🚗 Add Vehicle</h2>
+    <form id="addVehicleForm">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Vehicle Type:</label>
+          <input type="text" name="vehicleType" placeholder="e.g., Car, Bike" required>
+        </div>
+        <div class="form-group">
+          <label>Model:</label>
+          <input type="text" name="model" placeholder="e.g., Activa, Swift" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Price (₹/hr):</label>
+          <input type="number" name="price" placeholder="e.g., 100" required>
+        </div>
+        <div class="form-group">
+          <label>Hours Available:</label>
+          <input type="number" name="hours" placeholder="e.g., 4" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Location:</label>
+          <input type="text" name="location" placeholder="e.g., Avadi, Chennai" required>
+        </div>
+        <div class="form-group">
+          <label>Contact:</label>
+          <input type="text" name="contact" placeholder="e.g., 9876543210" required>
+        </div>
+      </div>
+
+      <button type="submit">➕ Add Vehicle</button>
+      <div id="message"></div>
+
+    </form>
+  </div>
+
+  <script src="owner_dashboard.js"></script>
+</body>
+</html>
